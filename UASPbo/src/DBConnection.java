@@ -146,7 +146,7 @@ public class DBConnection { // class DBConnection. bertanggung jawab untuk menga
         // hapus data
         stmt.execute(sql); // digunakan untuk menjalankan pernyataan SQL yang menyisipkan data baru ke dalam tabel.
         
-        System.out.println("Data telah terhapus..."); // sebuah label
+        System.out.println("Data task terhapus..."); // sebuah label
     } catch (Exception e) { // menangkap dan menangani exception yang mungkin terjadi selama eksekusi di try
         e.printStackTrace(); // digunakan untuk mencetak trace exception ke output standar.
     }

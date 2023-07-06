@@ -5,6 +5,12 @@ import java.io.BufferedReader; // digunakan untuk membaca teks dengan lebih efis
 import java.io.IOException; //  I/O exceptions digunakan untuk menangani situasi yang tidak terduga atau 
 // error yang terjadi saat membaca atau menulis data ke sumber daya input/output, seperti berkas, socket, atau input stream.
 
+
+/**
+ * @author Adriswara
+ * @npm 41155055220088
+ */
+
 public class Tester {
 
         static InputStreamReader InputStreamReader = new InputStreamReader(System.in); // mendeklarasikan objek, InputStreamReader 
@@ -61,7 +67,7 @@ public class Tester {
                     break;
                 }
                 default:
-                    System.out.println("Pilihan yang anda masukkan salah woy!"); // jika selain dari pilihan tampilkan pesan ini
+                    System.out.println("Menu Tidak valid!"); // jika selain dari pilihan tampilkan pesan ini
             }
             
         } catch (IOException | NumberFormatException e) {

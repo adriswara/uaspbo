@@ -77,17 +77,19 @@ public class DBConnection { // class DBConnection. bertanggung jawab untuk menga
             // digunakan untuk membuat objek Statement yang akan digunakan untuk mengeksekusi pernyataan SQL.
             
         // ambil input dari user
-        System.out.print("Nama Barang: "); // sebuah label
-        String nb = input.readLine().trim(); // membaca inputan dari keyboard
-        System.out.print("Ukuran: "); // sebuah label
-        String ukuran = input.readLine().trim(); // membaca inputan dari keyboard
-        System.out.print("Harga: "); // sebuah label
-        String harga = input.readLine().trim(); // membaca inputan dari keyboard
+        System.out.print("Todo Task: "); // sebuah label
+        String todo = input.readLine().trim(); // membaca inputan dari keyboard
+        System.out.print("kategori: "); // sebuah label
+        String kategori = input.readLine().trim(); // membaca inputan dari keyboard
+        System.out.print("tanggalselesai: "); // sebuah label
+        String tanggalselesai = input.readLine().trim(); // membaca inputan dari keyboard
+        System.out.print("status: "); // sebuah label
+        String status = input.readLine().trim(); // membaca inputan dari keyboard
         
         // query simpan
-        String sql = "INSERT INTO dbtokoseragam (nama_barang, ukuran, harga) VALUES('"+nb+"', '"+ukuran+"','"+harga+"')";
+        String sql = "INSERT INTO todo (todo, kategori, tanggalselesai,status) VALUES('"+todo+"', '"+kategori+"','"+tanggalselesai+"','"+status+"')";
         // var sql bertipe data string untuk menyimpan query SQL yang akan dieksekusi.
-        sql = String.format(sql, nb, ukuran, harga);
+        sql = String.format(sql, todo, kategori, tanggalselesai,status);
         
         // simpan barang
         stmt.execute(sql); // digunakan untuk menjalankan pernyataan SQL yang menyisipkan data baru ke dalam tabel.
@@ -104,17 +106,19 @@ public class DBConnection { // class DBConnection. bertanggung jawab untuk menga
             // digunakan untuk membuat objek Statement yang akan digunakan untuk mengeksekusi pernyataan SQL.
             
         // ambil input dari user
-        System.out.print("pilih ID yang mau diedit: "); // sebuah label
-        int idBarang = Integer.parseInt(input.readLine()); // membaca inputan dari keyboard
-        System.out.print("Nama: "); // sebuah label
-        String nb = input.readLine().trim(); // membaca inputan dari keyboard
-        System.out.print("Ukuran: "); // sebuah label
-        String ukuran = input.readLine().trim(); // membaca inputan dari keyboard
-        System.out.print("Harga: "); // sebuah label
-        String harga = input.readLine().trim(); // membaca inputan dari keyboard
+          System.out.print("pilih ID yang mau diedit: "); // sebuah label
+        int idTodo = Integer.parseInt(input.readLine()); // membaca inputan dari keyboard
+        System.out.print("Todo Task: "); // sebuah label
+        String todo = input.readLine().trim(); // membaca inputan dari keyboard
+        System.out.print("kategori: "); // sebuah label
+        String kategori = input.readLine().trim(); // membaca inputan dari keyboard
+        System.out.print("tanggalselesai: "); // sebuah label
+        String tanggalselesai = input.readLine().trim(); // membaca inputan dari keyboard
+        System.out.print("status: "); // sebuah label
+        String status = input.readLine().trim(); // membaca inputan dari keyboard
 
         // query update
-        String sql = "UPDATE dbtokoseragam SET nama_barang='"+nb+"', ukuran='"+ukuran+"', harga='"+harga+"' WHERE id='"+idBarang+"'";
+        String sql = "UPDATE todo SET todo='"+todo+"', kategori='"+kategori+"', tanggalselesai='"+tanggalselesai+"', status='"+status+"' WHERE id='"+idTodo+"'";
         // var sql bertipe data string untuk menyimpan query SQL yang akan dieksekusi.
         
         
@@ -136,7 +140,7 @@ public class DBConnection { // class DBConnection. bertanggung jawab untuk menga
         int idBarang = Integer.parseInt(input.readLine()); // membaca inputan dari keyboard 
         
         // buat query hapus
-        String sql = String.format("DELETE FROM dbtokoseragam WHERE id=%d", idBarang);
+        String sql = String.format("DELETE FROM todo WHERE id=%d", idBarang);
         // var sql bertipe data string untuk menyimpan query SQL yang akan dieksekusi.
         
         // hapus data
